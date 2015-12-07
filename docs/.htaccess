@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+Options -Indexes
+
+deny from all

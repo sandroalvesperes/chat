@@ -1,0 +1,54 @@
+/*
+ *  Copyright (c) 2015, Sandro Alves Peres
+ *  All rights reserved.
+ *
+ *  Date: 05/17/2014
+ *  http://www.zend.com/en/yellow-pages/ZEND022656
+ */
+
+.message-ui {
+    clear: both;
+    position: relative;
+}
+
+.message-ui-warning,
+.message-ui-error,
+.message-ui-notice,
+.message-ui-success,
+.message-ui-confirm {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.message-ui-warning {
+    background-image: url("../images/warning.png");
+}
+
+.message-ui-error {
+    background-image: url("../images/errorr.png");
+}
+
+.message-ui-notice {
+    background-image: url("../images/notice.png");
+}
+
+.message-ui-success {
+    background-image: url("../images/success.png");
+}
+
+.message-ui-confirm {
+    background-image: url("../images/question.png");
+}
+
+.message-ui-description {
+    position: absolute;
+    left: 30px;
+    top: 2px;
+    line-height: 18px;
+}

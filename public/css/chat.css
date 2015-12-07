@@ -1,0 +1,940 @@
+/*
+ *  Copyright (c) 2015, Sandro Alves Peres
+ *  All rights reserved.
+ *
+ *  Date: 10/13/2015
+ *  http://www.zend.com/en/yellow-pages/ZEND022656
+ */
+
+::-moz-focus-inner {
+    border: none;
+}
+
+::-moz-selection {
+    background: #e74444;
+    color: whitesmoke;
+}
+
+::selection {
+    background: #e74444;
+    color: whitesmoke;
+}
+
+* {
+    font-family: verdana, arial, tahoma;
+    font-size: 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    background-repeat: no-repeat;
+}
+
+img {
+    border: 0;
+}
+
+.mandatory {
+    border-color: #aa0022;
+}
+
+.unselectable,
+.unselectable * {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.clearfix {
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    background-color: #f9f9f9;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    color: #444;
+    height: 80px;
+    background-color: #e6e7fa;
+    position: relative;
+    box-shadow: inset 2px 2px 7px rgba(90,90,90,.3);
+    -moz-box-shadow: inset 2px 2px 7px rgba(90,90,90,.3);
+    -webkit-box-shadow: inset 2px 2px 7px rgba(90,90,90,.3);
+    -khtml-box-shadow: inset 2px 2px 7px rgba(90,90,90,.3);
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header p {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+}
+
+.header .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header .logo img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+/*    position: relative;
+    top: 50%;
+    transform: translateY(-50%);*/
+}
+
+.noscript {
+    padding: 8px;
+    padding-left: 40px;
+    line-height: 22px;
+    color: #aa0022;
+    background-position: 10px 16px;
+    background-color: #ffffe2;
+    background-image: url("../images/warning.png");
+}
+
+.body {
+    margin-top: 1px;
+    margin-bottom: 25px;
+    border-top: 1px solid #d0d0d0;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: #7892ab;
+}
+
+.footer * {
+    color: white;
+}
+
+.footer span {
+    float: right;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.info-bar {
+    color: #111222;
+    background-color: #cccddd;
+    line-height: 24px;
+    height: 24px;
+    text-indent: 10px;
+}
+
+.floating-button-group {
+    position: absolute;
+    top: -14px;
+    right: 10px;
+}
+
+.floating-button-group button {
+    margin-left: 3px;
+    position: relative;
+}
+
+/* LOADING */
+/* ------------------------------------------ */
+
+#loading {
+    display: none;
+}
+
+.loading-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    background-color: whitesmoke;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    -khtml-opacity: .50;
+}
+
+.loading-img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9999;
+    background-position: center;
+    background-image: url("../images/loader.gif");
+}
+
+/* FORM CLIENT */
+/* ------------------------------------------ */
+
+.form-client {
+    margin: 30px;
+}
+
+.form-client p label {
+    vertical-align: middle;
+    color: #444;
+}
+
+.form-client p {
+    margin-bottom: 8px;
+    height: 26px;
+}
+
+/* Hack for jQuery Radio */
+.form-client p p {
+    height: 17px;
+    margin-bottom: 0;
+}
+
+.form-client p span {
+    width: 25%;
+    color: #aa0022;
+    float: left;
+    margin-top: 5px;
+}
+
+.form-client p input[type='text'] {
+    width: 75%;
+}
+
+.form-client p input[type='text'] {
+    width: 75%;
+}
+
+.form-client .message {
+    height: 80px;
+}
+
+.form-client textarea {
+    width: 100%;
+    height: 60px;
+    resize: none;
+    padding: 4px;
+    margin-top: 5px;
+}
+
+.form-client .loading {
+    background-image: url("../images/loader-3.gif");
+    background-position: right 4px;
+}
+
+/* CONVERSATION */
+/* ------------------------------------------ */
+
+.conversation {
+    margin: 1px;
+    position: relative;
+}
+
+.conversation .info-bar {
+    text-indent: 32px;
+    background-color: #cccddd;
+    font-size: 11px;
+}
+
+.conversation .info-bar img {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+}
+
+.conversation .history-wrapper {
+    position: relative;
+}
+
+.conversation .typing {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    margin: auto;
+    padding: 2px 8px 2px 8px;
+    line-height: 20px;
+    width: 40px;
+    cursor: default;
+    background-color: #f9f9f9;
+    background-position: center;
+    background-image: url("../images/loader-small.gif");
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+
+.conversation .history {
+    height: 200px;
+    border: 1px solid #d0d0d0;
+    margin-top: 1px;
+    padding: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.conversation .history .me,
+.conversation .history .you {
+    clear: both;
+    max-width: 85%;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 12px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    color: navy;
+}
+
+.conversation .history .me {
+    float: right;
+    background-color: #c1d4ec;
+    box-shadow: 0 3px 5px #7892ab;
+    -moz-box-shadow: 0 3px 5px #7892ab;
+    -webkit-box-shadow: 0 3px 5px #7892ab;
+    -khtml-box-shadow: 0 3px 5px #7892ab;
+}
+
+.conversation .history .you {
+    float: left;
+    background-color: #e7e7e8;
+    box-shadow: 0 3px 5px #999999;
+    -moz-box-shadow: 0 3px 5px #999999;
+    -webkit-box-shadow: 0 3px 5px #999999;
+    -khtml-box-shadow: 0 3px 5px #999999;
+}
+
+.conversation .history .message {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.conversation .history .datetime,
+.conversation .history .datetime sup,
+.conversation .history .sending,
+.conversation .history .waiting,
+.conversation .history .error {
+    min-width: 60px;
+    padding: 0;
+    padding-right: 4px;
+    margin: 0;
+    text-indent: 16px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 9px;
+    color: #888aaa;
+    background-position: 0 center;
+}
+
+.conversation .history .datetime {
+    background-position: 0 5px;
+    background-image: url("../images/check-small.png");
+}
+
+.conversation .history .sending {
+    text-indent: 33px;
+    background-image: url("../images/loader-small.gif");
+}
+
+.conversation .history .waiting {
+    background-image: url("../images/time-small.png");
+}
+
+.conversation .history .error {
+    background-image: url("../images/error-small.png");
+    text-indent: 18px;
+    color: #e74444;
+    cursor: pointer;
+}
+
+.conversation .type-message {
+    height: 80px;
+    border: 1px solid #d0d0d0;
+    margin-top: 1px;
+    padding: 3px;
+}
+
+.conversation .type-message textarea {
+    width: 80%;
+    height: 100%;
+    resize: none;
+    padding: 5px;
+    float: left;
+    margin: 0;
+    margin-left: 1px;
+    border-left-width: 1px;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-top-right-radius: 0;
+    -moz-border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.conversation .type-message .send-button {
+    width: 20%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    margin-left: -2px;
+    vertical-align: middle;
+    transition: .1s ease-in all;
+    -webkit-transition: .1s ease-in all;
+    -moz-transition: .1s ease-in all;
+    -o-transition: .1s ease-in all;
+}
+
+/* WAITING SUPPORT */
+/* ------------------------------------------ */
+
+.waiting {
+    margin: 1px;
+    position: relative;
+}
+
+.waiting .info-bar {
+    font-size: 11px;
+}
+
+.waiting .info-message {
+    line-height: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.waiting .count-down {
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.waiting .count-down .crossline {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 49%;
+    border-bottom: 2px solid red;
+    z-index: 1;
+    box-shadow: 0 3px 5px #999999;
+    -moz-box-shadow: 0 3px 5px #999999;
+    -webkit-box-shadow: 0 3px 5px #999999;
+    -khtml-box-shadow: 0 3px 5px #999999;
+}
+
+.waiting .count-down .middle-box {
+    position: absolute;
+    width: 180px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    margin: auto;
+}
+
+.waiting .count-down .circle {
+    width: 60px;
+    height: 60px;
+    line-height: 58px;
+    margin-top: 2px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #f9f9f9;
+    border: 2px solid red;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Arial Black", arial, verdana;
+    font-size: 16px;
+    color: #444555;
+    box-shadow: 3px 3px 5px #999999;
+    -moz-box-shadow: 3px 3px 5px #999999;
+    -webkit-box-shadow: 3px 3px 5px #999999;
+    -khtml-box-shadow: 3px 3px 5px #999999;
+}
+
+.waiting .count-down span {
+    position: absolute;
+    left: 66px;
+    top: 43px;
+}
+
+.waiting .waiting-operator {
+    background-position: center;
+    background-image: url("../images/loader-2.gif");
+    height: 30px;
+    margin-top: 20px;
+}
+
+/* EVALUATE SUPPORT */
+/* ------------------------------------------ */
+
+.evaluate {
+    margin: 1px;
+    position: relative;
+}
+
+.evaluate .info-bar {
+    font-size: 11px;
+}
+
+.evaluate .info-message {
+    line-height: 24px;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.evaluate .info-message p {
+    display: inline-block;
+    text-align: left;
+    *zoom: 1;
+    *display: inline;
+}
+
+.evaluate .info-message img {
+    display: inline-block;
+    margin-right: 7px;
+    *zoom: 1;
+    *display: inline;
+}
+
+.evaluate .rate-stars {
+    margin-top: 22px;
+    position: relative;
+    height: 60px;
+    clear: both;
+}
+
+.evaluate .rate-stars ul {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    list-style-position: inside;
+    width: 150px;
+    overflow: visible;
+}
+
+.evaluate .rate-stars ul li {
+    float: left;
+    width: 25px;
+    cursor: pointer;
+    margin: 0 2px 0 2px;
+    list-style-image: url("../images/star-disabled.png");
+}
+
+.evaluate .rate-stars ul li.selected {
+    list-style-image: url("../images/star.png");
+}
+
+.evaluate .button-group {
+    text-align: center;
+}
+
+/* CLIENTS LIST */
+/* ------------------------------------------ */
+
+.support {
+    margin: 1px;
+    position: relative;
+}
+
+.support .users-button {
+    text-indent: 15px;
+    width: 75px;
+}
+
+.support .users-button img {
+    position: absolute;
+    left: 5px;
+}
+
+.support .quit-button {
+    width: 55px;
+}
+
+.support .info-bar {
+    font-size: 11px;
+}
+
+.support .status {
+    background-color: #eee;
+    padding: 20px;
+}
+
+.support .status table {
+    border-collapse: collapse;
+    border: 0;
+}
+
+.support .status td:first-child {
+    padding-right: 15px;
+}
+
+.support .status .description {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #1d5987;
+    letter-spacing: 1px;
+    padding-left: 2px;
+}
+
+.support .grid table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.support .grid th {
+    text-align: left;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 3px;
+}
+
+.support .grid td {
+    line-height: 30px;
+    padding: 3px;
+}
+
+.support .grid .td-first {
+    width: 28px;
+}
+
+.support .grid .td-last {
+    width: 80px;
+}
+
+.support .grid tbody tr:nth-child(odd) {
+    background-color: #e6e7fa;
+}
+
+.support .grid tbody tr:hover {
+    background-color: #cccddd;
+}
+
+.support .grid .male-icon {
+    background-position: center;
+    background-image: url("../images/male.png");
+}
+
+.support .grid .female-icon {
+    background-position: center;
+    background-image: url("../images/female.png");
+}
+
+.support .grid .action-open {
+    width: 28px;
+    background-image: url("../images/chat.png");
+}
+
+.support .grid .action-disconnect {
+    width: 28px;
+    background-image: url("../images/disconnect.png");
+}
+
+.support .grid .waiting-time {
+    text-indent: 22px;
+    background-position: 0 center;
+    background-image: url("../images/time.png");
+}
+
+.support .grid .chatting {
+    color: #1d5987;
+    text-indent: 20px;
+    background-position: 0 center;
+    background-image: url("../images/support-2.png");
+}
+
+.support .grid .waiting-time.too-much {
+    color: red;
+    background-image: url("../images/time-red.png");
+}
+
+.support .grid .empty-result,
+.support .grid .result-error {
+    line-height: 40px;
+    background-position: 5px 10px;
+    text-indent: 35px;
+    width: 100%;
+}
+
+.support .grid .empty-result {
+    background-image: url("../images/notice.png");
+}
+
+.support .grid .result-error {
+    background-image: url("../images/error.png");
+    color: #aa0022;
+}
+
+/* LOGIN */
+/* ------------------------------------------ */
+
+.login {
+    width: 400px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.login p label {
+    vertical-align: middle;
+    color: #555;
+}
+
+.login p {
+    margin-bottom: 8px;
+    height: 26px;
+}
+
+.login p span {
+    width: 25%;
+    color: #aa0022;
+    float: left;
+    margin-top: 5px;
+}
+
+.login p input[type='text'],
+.login p input[type='password'] {
+    width: 75%;
+}
+
+.login .message-error {
+    line-height: 24px;
+    background-position: 3px 2px;
+    background-image: url("../images/error.png");
+    padding-bottom: 3px;
+    border-bottom: 1px dashed #a6c9e2 ;
+    margin-bottom: 35px;
+    text-indent: 30px;
+    display: none;
+}
+
+/* Hack for jQuery Checkbox */
+.login p p {
+    height: 20px;
+    margin-bottom: 0;
+}
+
+/* MODULE: Users */
+/* ------------------------------------------ */
+
+.users {
+    margin: 1px;
+    position: relative;
+}
+
+.users .new-user-button {
+    text-indent: 15px;
+    width: 100px;
+}
+
+.users .new-user-button img {
+    position: absolute;
+    left: 5px;
+}
+
+.users .back-button {
+    width: 55px;
+}
+
+.users .info-bar {
+    font-size: 11px;
+}
+
+.users .filter {
+    padding: 15px;
+    padding-left: 20px;
+    color: #555;
+}
+
+.users .filter #filter {
+    margin-top: 10px;
+}
+
+.users .filter td {
+    padding: 3px;
+}
+
+.users .filter td:first-child {
+    padding-right: 15px;
+}
+
+.users .filter label {
+    vertical-align: middle;
+}
+
+.users .grid table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.users .grid th {
+    text-align: left;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 3px;
+}
+
+.users .grid td {
+    line-height: 30px;
+    padding: 3px;
+}
+
+.users .grid .td-first {
+    width: 28px;
+}
+
+.users .grid .td-last {
+    width: 70px;
+}
+
+.users .grid tbody tr:nth-child(odd) {
+    background-color: #e6e7fa;
+}
+
+.users .grid tbody tr:hover {
+    background-color: #cccddd;
+}
+
+.users .grid .check {
+    background-position: center;
+    background-image: url("../images/check.png");
+}
+
+.users .grid .male-icon {
+    background-position: center;
+    background-image: url("../images/male.png");
+}
+
+.users .grid .female-icon {
+    background-position: center;
+    background-image: url("../images/female.png");
+}
+
+.users .grid .action-edit {
+    width: 28px;
+    background-image: url("../images/pencil.png");
+}
+
+.users .grid .empty-result,
+.users .grid .result-error {
+    line-height: 40px;
+    background-position: 5px 10px;
+    text-indent: 35px;
+}
+
+.users .grid .empty-result {
+    background-image: url("../images/notice.png");
+}
+
+.users .grid .result-error {
+    background-image: url("../images/error.png");
+    color: #aa0022;
+}
+
+/* FORM FOR USERS MAINTENANCE */
+/* ------------------------------------------ */
+
+.form-user {
+    padding: 20px;
+}
+
+.form-user td {
+    padding: 5px;
+}
+
+.form-user td:first-child {
+    width: 100px;
+}
+
+.form-user label {
+    vertical-align: middle;
+}
+
+.form-user fieldset {
+    margin-top: 20px;
+}
+
+/* ERROR PAGE */
+/* ------------------------------------------ */
+
+.error-page {
+    margin: 1px;
+    position: relative;
+}
+
+.error-page .info-bar {
+    font-size: 11px;
+}
+
+.error-page .error-panel {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.error-page .error-panel img {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+
+.error-page .error-panel p {
+    position: absolute;
+    left: 200px;
+    top: 40px;
+    width: 100%;
+    font-size: 20px;
+    color: #333;
+    border-bottom: 2px solid red;
+    padding-bottom: 20px;
+}

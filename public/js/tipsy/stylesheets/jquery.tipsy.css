@@ -1,0 +1,46 @@
+.tipsy { 
+    padding: 5px; 
+    font-size: 12px;
+    font-family: verdana, tahoma, sans-serif, arial;
+    opacity: 1; 
+    filter: alpha(opacity=80); 
+    background-repeat: no-repeat;  
+    background-image: url("../images/tipsy.gif"); 
+}
+
+.tipsy-inner { 
+    padding: 5px 8px 4px 8px; 
+    color: #666; 
+    max-width: 200px; 
+    text-align: center; 
+    border: 1px solid #808080; 
+    background-color: #ffffe0;
+    background-image: -moz-linear-gradient(top, #ffffff, #ffffd0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ffffd0));
+    background-image: -webkit-linear-gradient(top, #ffffff, #ffffd0);
+    background-image: -o-linear-gradient(top, #ffffff, #ffffd0);
+    background-image: linear-gradient(to bottom, #ffffff, #ffffd0);    
+    background-repeat: repeat-x;     
+}
+
+.tipsy-inner { 
+    -moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    border-radius: 3px;
+}
+
+.tipsy-north { 
+    background-position: top center; 
+}
+
+.tipsy-south { 
+    background-position: bottom center; 
+}
+
+.tipsy-east { 
+    background-position: right center; 
+}
+
+.tipsy-west { 
+    background-position: left center; 
+}

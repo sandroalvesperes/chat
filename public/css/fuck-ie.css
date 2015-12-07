@@ -1,0 +1,81 @@
+/*
+ *  Copyright (c) 2015, Sandro Alves Peres
+ *  All rights reserved.
+ *
+ *  Date: 12/04/2015
+ *  http://www.zend.com/en/yellow-pages/ZEND022656
+ */
+
+.loading-img {
+    top: 33%;
+    left: 39%;
+}
+
+.header .logo img {
+    top: 10px;
+    left: 20px;
+}
+
+.form-client p input[type='text'] {
+    width: 72%;
+}
+
+.form-client .message {
+    margin-top: 0;
+}
+
+.form-client textarea {
+    width: 97%;
+    padding: 0;
+}
+
+.waiting .count-down .middle-box {
+    width: 100%;
+    text-align: center;
+}
+
+.waiting .count-down span {
+    left: 59%;
+    top: 52px;
+}
+
+.login {
+    padding-top: 80px;
+}
+
+.login p input[type='text'],
+.login p input[type='password'] {
+    width: 72%;
+}
+
+.support .grid .action-open {
+    margin-right: 4px;
+}
+
+.conversation .typing {
+    left: 2px;
+}
+
+.conversation .type-message textarea {
+    width: 75%;
+    height: 68px;
+}
+
+.conversation .type-message .send-button {
+    width: 20%;
+}
+
+.form-user fieldset legend {
+    margin-bottom: 8px;
+}
+
+.form-input {
+    padding: 0;
+    height: 20px;
+    padding-top: 3px;
+}
+
+.form-button {
+    padding: 0;
+    line-height: 26px;
+}

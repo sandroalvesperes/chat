@@ -1,0 +1,38 @@
+/*
+*  Copyright (c) 2013, Sandro Alves Peres
+*  All rights reserved.
+*
+*  Date: 06/12/2013
+*  http://www.zend.com/en/yellow-pages/ZEND022656
+*/ 
+
+.radio-element {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-image: url("jquery.radio.png");
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 17px;
+    border: 0;
+    margin: 2px;
+    
+    *display: inline;
+    *zoom: 1;    
+}
+
+.radio-element-on {
+    background-position: 0 -21px;  
+}
+
+.radio-element-off {
+    background-position: 0 1px;  
+}
+
+.radio-element-disabled {
+    background-image: url("jquery.radio.disabled.png");    
+}
+
+.radio-element-mandatory {
+    background-image: url("jquery.radio.mandatory.png");    
+}

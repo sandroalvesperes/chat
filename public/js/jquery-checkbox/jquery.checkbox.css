@@ -1,0 +1,34 @@
+/*
+*  Copyright (c) 2013, Sandro Alves Peres
+*  All rights reserved.
+*
+*  Date: 05/12/2013
+*  http://www.zend.com/en/yellow-pages/ZEND022656
+*/
+
+.checkbox-element {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-image: url("jquery.checkbox.png");
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 17px;
+    border: 0;
+    margin: 2px;
+
+    *display: inline;
+    *zoom: 1;
+}
+
+.checkbox-element-on {
+    background-position: 0 -20px;
+}
+
+.checkbox-element-off {
+    background-position: 0 2px;
+}
+
+.checkbox-element-disabled {
+    background-image: url("jquery.checkbox.disabled.png");
+}
