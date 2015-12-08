@@ -496,6 +496,7 @@ html, body {
     position: absolute;
     left: 66px;
     top: 43px;
+    width: 100%;    
 }
 
 .waiting .waiting-operator {
@@ -585,7 +586,6 @@ html, body {
 
 .support .users-button {
     text-indent: 15px;
-    width: 75px;
 }
 
 .support .users-button img {
@@ -772,7 +772,6 @@ html, body {
 
 .users .new-user-button {
     text-indent: 15px;
-    width: 100px;
 }
 
 .users .new-user-button img {

@@ -3,6 +3,7 @@
     $this->js     = 'pages/evaluate.js';
     $this->widget->enable('ui');
     $this->widget->enable('toast');
+    $this->widget->enable('tipsy');
 ?>
 
 <div class="evaluate">
@@ -14,7 +15,7 @@
     <div class="info-message">
         <img src="<?=URL::baseUrl();?>/public/images/support.png" alt="" />
         <p>
-            In order to improve our services.<br />Please evaluate this support
+            In order to improve our services<br />Please evaluate this support
         </p>
     </div>
 

@@ -86,18 +86,37 @@ class Login extends BaseController
 
     public function get_signOut()
     {
-        if( isset($_SESSION['support_user']) && count($_SESSION) == 1 )
+        try
         {
-            unset($_SESSION['support_user']);
-            session_unset();
-            session_destroy();
-        }
-        else
-        {
-            unset($_SESSION['support_user']);
-        }
+            $idUser = @$_SESSION['support_user']['id_user'];
 
-        Header::redirect(URL::baseUrl() . '/login');
+            if( $idUser )
+            {
+                $this->orm->support_user[ $idUser ]->update(array(
+                    'online'        => 0,
+                    'typing'        => 0,
+                    'last_activity' => new NotORM_Literal('NOW()')
+                ));
+            }
+
+            if( isset($_SESSION['support_user']) && count($_SESSION) == 1 )
+            {
+                unset($_SESSION['support_user']);
+                session_unset();
+                session_destroy();
+            }
+            else
+            {
+                unset($_SESSION['support_user']);
+            }
+
+            Header::redirect(URL::baseUrl() . '/login');
+        }
+        catch( Exception $e )
+        {
+            $view = View::instance();
+            $view->render('error');
+        }
     }
 
 }
