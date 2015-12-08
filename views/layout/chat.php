@@ -14,7 +14,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10,chrome=1" />
         <meta name="rating" content="general" />
         <meta name="author" content="Sandro Alves Peres" />
-        <meta name="title" content="Simple Chat - Supporting Clients" />
+        <meta name="title" content="WeSupport Chat - Supporting Clients" />
         <meta name="owner" content="http://www.zend.com/en/yellow-pages/ZEND022656" />
         <meta name="robots" content="noindex,nofollow" />
         <meta name="googlebot" content="noindex,nofollow" />

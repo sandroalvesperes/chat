@@ -8,13 +8,12 @@
 <div class="evaluate">
 
     <div class="info-bar">
-        Aguarde na fila tá ligado
+        Evaluate our support
     </div>
 
     <div class="info-message">
         <img src="<?=URL::baseUrl();?>/public/images/support.png" alt="" />
         <p>
-
             In order to improve our services.<br />Please evaluate this support
         </p>
     </div>

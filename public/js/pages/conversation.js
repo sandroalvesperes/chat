@@ -9,7 +9,7 @@ var queueAjax = [];
 
 function sendMessage( message )
 {
-    var className = 'Sending';
+    var className = 'sending';
 
     if( typeof message != 'string' )
     {
@@ -24,14 +24,14 @@ function sendMessage( message )
     {
         if( queueAjax[0].sent )
         {
-            className = 'Waiting';
+            className = 'waiting';
         }
     }
 
     var objMessage = $(
         '<div class="me">' +
             '<p class="message">' + messageFormatted + '</p>' +
-            '<p class="unselectable ' + className.toLowerCase() + '">' + className + '</p>' +
+            '<p class="unselectable ' + className + '">' + (className == 'sending' ? 'Sending' : 'Waiting') + '</p>' +
         '</div>' +
         '<p class="clearfix">&nbsp;</p>'
     );
