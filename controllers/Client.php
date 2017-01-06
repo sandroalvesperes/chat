@@ -243,7 +243,7 @@ class Client extends BaseController
             }
             else
             {
-                die('{ "ok" : false, "msg" : "Error senting the e-mail" }');
+                die('{ "ok" : false, "msg" : "Error sending the e-mail" }');
             }
         }
         catch( Exception $e )
