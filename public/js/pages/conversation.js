@@ -616,9 +616,9 @@ $(function()
 
     setTimeout(function()
     {
-        intervalQueue       = setInterval(queueCheck, 500);
-        intervalMessages    = setInterval(updateReceivedMessages, 2000);
-        intervalTypingCheck = setInterval(typingCheck, 2000);
+        intervalQueue       = setInterval(queueCheck, 1000);
+        intervalMessages    = setInterval(updateReceivedMessages, 4000);
+        //intervalTypingCheck = setInterval(typingCheck, 2000);
         intervalClosedCheck = setInterval(chatClosedCheck, 5000);
     },
     1000);
